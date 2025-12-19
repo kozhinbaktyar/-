@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سیستەمی پەیامنێری</title>
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#764ba2">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="nav-right">
+    <div class="logo">💬</div>
+    <div class="app-title">سیستەمی پەیامنێری</div>
+  </div>
+  <button class="icon-btn" onclick="refreshMessages()">🔄</button>
+</nav>
+
+<div class="container">
+
+  <div class="login-box" id="loginBox">
+    <h2>بەخێربێیت</h2>
+    <p>کۆدی تایبەتی خۆت بنووسە</p>
+
+    <div class="input-group">
+      <input id="userIdInput" placeholder="ID">
+    </div>
+
+    <button class="btn-login" onclick="login()">چوونەژوورەوە</button>
+    <p id="error" class="error">کۆدی هەڵە</p>
+  </div>
+
+  <div class="chat-container" id="chatContainer">
+    <div class="chat-header">
+      <h3>پەیامەکانت</h3>
+      <div id="userInfo"></div>
+    </div>
+    <div class="messages-area" id="messagesArea"></div>
+  </div>
+
+</div>
+
+<audio id="notificationSound" preload="auto">
+  <source src="https://assets.mixkit.co/sfx/preview/mixkit-bell-notification-933.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
